@@ -1,0 +1,27 @@
+# 服务端配置
+server:
+  host: "127.0.0.1"
+  port: "5000"
+
+# mysql备份任务配置
+mysql_task:
+#  分 时 日 月 周
+#  示例：
+#  "0 1 * * *"：每天凌晨 1 点执行
+#  "0 12 * * 1-5"：每周一到周五中午 12 点执行
+  # 每周六晚上12点
+  #crontab: "0 0 * * 6"
+  # 每分钟
+  crontab: "* * * * *"
+  host: "localhost"
+  port: "3306"
+  username: "root"
+  password: "123456"
+  database: "mysql"
+  backupDir: "db_backup"
+
+# 文件备份任务配置
+file_task:
+  name: "minio"
+  crontab: "* * * * *"
+  backupDir: "db_backup"
