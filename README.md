@@ -57,6 +57,9 @@ cd server
 pipenv install
 # 执行启动程序
 pipenv run python app.py
+
+#后台执行
+pipenv run python -u agent.py >> agent.log &
 ```
 
 提示如下日志，则启动成功
