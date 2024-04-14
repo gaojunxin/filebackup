@@ -162,7 +162,7 @@ def file_backup_task():
     # 执行文件压缩
     current_time = time.strftime('%Y%m%d%H%M%S', time.localtime())
 
-    file_backup_dir = "file_backup"
+    file_backup_dir = file_config.get("targetDir")
     # 创建备份目录
     if not os.path.exists(file_backup_dir):
         os.makedirs(file_backup_dir)

@@ -12,7 +12,7 @@ mysql_task:
   # 每周六晚上12点
   #crontab: "0 0 * * 6"
   # 每分钟
-  crontab: "* * * * *"
+  crontab: "0 0 * * 6"
   host: "localhost"
   port: "3306"
   username: "root"
@@ -21,7 +21,10 @@ mysql_task:
   backupDir: "db_backup"
 
 # 文件备份任务配置
-file_task:
-  name: "minio"
-  crontab: "* * * * *"
-  backupDir: "db_backup"
+# file_task:
+#   name: "minio"
+#   crontab: "* * * * *"
+#   # 要备份到的目标文件夹
+#   targetDir: "file_backup"
+#   # 要备份的文件夹
+#   backupDir: "/minio"

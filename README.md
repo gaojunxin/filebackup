@@ -36,6 +36,8 @@ pipenv install
 pipenv run python agent.py
 ```
 
+具体配置可以参考`agent/config.yml`文件中的注释
+
 ![image.png](http://image.gaojunxin.cn/i/2024/03/15/65f3f1aa841c4.png)
 
 ## 服务端
